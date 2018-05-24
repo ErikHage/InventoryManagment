@@ -1,0 +1,23 @@
+{
+  "name": "inventory-management",
+  "version": "1.0.0",
+  "description": "An electron app to manage inventory",
+  "main": "lib/app.js",
+  "scripts": {
+    "start": "electron ./lib/app.js",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErikHage/inventory-management.git"
+  },
+  "author": "Erik Hage",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ErikHage/inventory-management/issues"
+  },
+  "homepage": "https://github.com/ErikHage/inventory-management#readme",
+  "dependencies": {
+    "electron": "^2.0.2"
+  }
+}
