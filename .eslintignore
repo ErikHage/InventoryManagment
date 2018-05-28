@@ -1,0 +1,4 @@
+spec/helpers
+spec/coverage
+bin
+lib/public

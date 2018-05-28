@@ -1,0 +1,32 @@
+{
+  "VALIDATION_ERROR": {
+    "type": "Validation",
+    "message": "Error during validation",
+    "status": 400
+  },
+  "ERROR_CREATING_PRODUCT": {
+    "type": "Operation Failure",
+    "message": "Error occurred when creating product",
+    "status": 500
+  },
+  "ERROR_READING_PRODUCT": {
+    "type": "Operation Failure",
+    "message": "Error occurred when reading product",
+    "status": 500
+  },
+  "PRODUCT_NOT_FOUND": {
+    "type": "Not Found",
+    "message": "A product with that id doesn't exist",
+    "status": 404
+  },
+  "ERROR_UPDATING_PRODUCT": {
+    "type": "Operation Failure",
+    "message": "Error occurred when updating product",
+    "status": 500
+  },
+  "ERROR_DELETING_PRODUCT": {
+    "type": "Operation Failure",
+    "message": "Error occurred when deleting product",
+    "status": 500
+  }
+}

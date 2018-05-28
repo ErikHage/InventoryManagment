@@ -5,7 +5,13 @@
   "main": "lib/app.js",
   "scripts": {
     "start": "electron ./lib/app.js",
-    "test": ""
+    "lint": "eslint lib spec",
+    "lint-fix": "eslint --fix lib spec",
+    "test-unit": "mocha --require spec/helpers/init \"spec/unit/**/*.spec.js\"",
+    "coverage": "nyc --reporter=json-summary --reporter=text-summary mocha --require spec/helpers/init \"spec/unit/**/*.spec.js\"",
+    "coverage-check": "nyc check-coverage --reporter=text-summary -- mocha --require spec/helpers/init \"spec/unit/**/*.spec.js\"",
+    "coverage-update": "node bin/update-coverage.js",
+    "prepush": "npm run lint && npm run coverage && npm run coverage-update"
   },
   "repository": {
     "type": "git",
@@ -18,6 +24,24 @@
   },
   "homepage": "https://github.com/ErikHage/inventory-management#readme",
   "dependencies": {
-    "electron": "^2.0.2"
+    "electron": "^2.0.2",
+    "errr": "^2.6.0",
+    "joi": "^13.3.0",
+    "nyc": "^11.8.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "dirty-chai": "^2.0.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.14.3",
+    "mocha": "^4.0.1",
+    "mocha-multi": "^0.11.1",
+    "sinon": "^4.1.2",
+    "sinon-chai": "^2.14.0"
   }
 }

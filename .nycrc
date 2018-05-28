@@ -1,0 +1,17 @@
+{
+  "statements": 100,
+  "branches": 100,
+  "functions": 50,
+  "lines": 100,
+  "exclude": [
+    "node_modules",
+    "bin",
+    "spec",
+    "**/*.spec.js",
+    "lib/app.js",
+    "lib/errors",
+    "lib/views"
+  ],
+  "check-coverage": true,
+  "report-dir": "spec/coverage"
+}
